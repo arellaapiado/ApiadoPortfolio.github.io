@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap & CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=REM:wght@200&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/6f0e0c3b19.js" crossorigin="anonymous"></script>
+  <title>Comments</title>
+</head>
+
+<body>
+
+  <section id="posts">
+    <div class="row">
+      <div class="col-10">
+        <img class="post-profile"
+          src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Man Profile Pic">
+        <h6>Hey everyone! Check out my new PodList I made public</h6>
+      </div>
+      <div class="col-2 time">
+        <p class="post-time">10:21 PM</p>
+      </div>
+    </div>
+    <br>
+
+    <section id="icon-section">
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-2">
+          <i class="fa-solid fa-headphones fa-xl podcast-icon"></i>
+        </div>
+        <div class="col-2">
+          <i class="fa-solid fa-heart fa-xl change-color" onclick="changeColor(0, 89)"></i>
+          <p class="likes-comms change-likes">89</p>
+        </div>
+        <div class="col-2">
+          <i class="fa-regular fa-comment fa-xl post-icon"></i>
+          <p class="likes-comms">45</p>
+        </div>
+        <div class="col-2">
+          <i class="fa-solid fa-arrow-up-from-bracket fa-xl post-icon"></i>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section id="comments">
+    <h5>Comments</h5>
+    <div class="row container-fluid">
+      <div class="col-10">
+        <img class="post-profile"
+          src="https://images.unsplash.com/photo-1503235930437-8c6293ba41f5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Man Profile Pic">
+          <h6>WaveWhiz<br>I love this podcast!</h6>
+          <p class="reply">Reply</p>
+      </div>
+      <div class="col-2">
+        <p class="post-time">8:41 PM</p>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row container-fluid">
+      <div class="col-10">
+        <img class="post-profile"
+          src="https://images.unsplash.com/photo-1566277913310-9834504c22e7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Woman Profile Pic">
+          <h6>SonicSnack<br>Loved it! Recommended it to my friends</h6>
+          <p class="reply">Reply</p>
+      </div>
+      <div class="col-2">
+        <p class="post-time">8:41 PM</p>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row container-fluid">
+      <div class="col-10">
+        <img class="post-profile"
+          src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=2896&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Man Profile Pic">
+          <h6>CastFlick<br>This podcast is a game-changer! The insights shared here have truly enriched my perspective in college. Highly recommend giving it a listen!</h6>
+          <p class="reply">Reply</p>
+      </div>
+      <div class="col-2">
+        <p class="post-time">8:41 PM</p>
+      </div>
+    </div>
+    <hr>
+  </section>
+
+  <section id="comment-input">
+    <div class="row container-fluid">
+      <div class="col-2">
+        <img class="post-profile"
+          src="https://images.unsplash.com/photo-1544568100-847a948585b9?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Dog Profile Pic">
+      </div>
+      <div class="col-8 comment-box">
+        <form>
+          <input type="text" class="text-box" name="myTextBox" placeholder="Add a comment...">
+        </form>
+      </div>
+      <div class="col-2 send-icon">
+        <i class="fa-solid fa-circle-arrow-up fa-2xl post-icon send-comment"></i>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="podcasts.js" charset="utf-8"></script>
+
+</body>
+
+</html>
